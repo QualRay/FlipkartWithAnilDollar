@@ -15,8 +15,9 @@ function D() {
 
   return (
         <>
-        <h1>Your current salary is {pay}</h1>
-        <button onClick={() => {incr();}}>Increace</button>
+
+        <h1>Your current salary is { pay.toFixed(2) }</h1>
+        <button onClick={() => {incr();}}>Increase</button>
         </>
       ) 
 }
