@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import A from './Components/A';
 import './index.css';
 import Message from './Message'
-import Hoc from './Components/Hoc'
+//import Hoc from './Components/Hoc'
 import MyFirstComponent from './Components/MyFirstComponent'
 import MySecondComp from './Components/MySecondComp'
+import D from './Components/D'
 
 
 function Student({mentor}){
@@ -43,6 +44,7 @@ ReactDOM.render(
     <Courses />
     <MyFirstComponent />
     <MySecondComp />
+    <D />
   </React.StrictMode>,
   document.getElementById('container')
 );
