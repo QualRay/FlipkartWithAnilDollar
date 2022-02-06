@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 function E() {
     //1. State
     //2. Function --------
     //3. Return Statement
-    const [payGrade, setPayGrade] = useState('E1');
+    //const [payGrade, setPayGrade] = useState('E1');
   
 
   return (
-    <div> Your pay grade is {payGrade} </div>
+    <div> Your pay grade is "E1x" </div>
   )
  
 }
