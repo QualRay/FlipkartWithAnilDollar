@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 export default function C() {
     //1. State
@@ -8,7 +8,7 @@ export default function C() {
 
     //Hook Variable
     // const [ variableName,  functionName] = hookVariable(value)
-    const [myLastName, setMyLastName] = useState('Rana');
+    //const [myLastName, setMyLastName] = useState('Rana');
 
     //2. Function 
 
@@ -17,7 +17,7 @@ export default function C() {
     //3. Return Statement
     return (
         <div>
-            Hello my first name is { myFirstName } and my last name is { myLastName }
+            Hello my first name is { myFirstName } 
 
             <ul className="list-group">
                 <li className="list-group-item">An item</li>
