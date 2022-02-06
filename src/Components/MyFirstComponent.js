@@ -7,12 +7,16 @@ function MyFirstComponent() {
     let testSet = () => {
      setY( y + 100); 
     }
-    return <div>
+    return (
+    <>
+    <div>
       The value of 'y' is { y } 
      
       <button onClick={() => {testSet(); }}>Boost!!</button>
       <br />
-    </div>;
+    </div>
+    </>
+    )
   }
 
   export default  MyFirstComponent;
