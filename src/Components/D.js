@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+import E from './E'
+import F from './F'
+
 function D() {
     //1. State
     //2. Function 
@@ -15,9 +18,11 @@ function D() {
 
   return (
         <>
-
+        <E />
         <h1>Your current salary is { pay.toFixed(2) }</h1>
         <button onClick={() => {incr();}}>Increase</button>
+        <br />
+        <F />
         </>
       ) 
 }
