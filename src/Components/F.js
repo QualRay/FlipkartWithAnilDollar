@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import swal from 'sweetalert';
+import { BASE_URL, headers }  from '../Helper'
 
 function F() {
 
@@ -22,12 +23,9 @@ function F() {
               }
         
 
-        fetch('http://localhost:1337/api/students', {
+        fetch(BASE_URL+'/api/students', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'accept': 'application/json'
-            },
+            headers: headers ,
             body: JSON.stringify(data)
         }).then((d)=>{
             console.log(d.status);
