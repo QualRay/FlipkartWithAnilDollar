@@ -27,12 +27,21 @@ function F() {
             method: 'POST',
             headers: headers ,
             body: JSON.stringify(data)
-        }).then((d)=>{
-            console.log(d.status);
-            if(d.status === 200){
+        }).then(response => response.json()) //This will make JSON data readable
+        .then((d)=>{
+            console.log(d);
+            //Success
+            //console.log(d.status);
+            if(d.data != null){
                 swal("Good Job!","Data created successfully!","Success");
             }
-        }).catch((e)=>{}).finally((all)=>{});
+            if(d.error.status === 403){
+                swal(d.error.name,d.error.message,"error");
+            }
+        }).catch((e)=>{
+            //error block
+            console.log(e);
+        }).finally((all)=>{});
     }
 
     //useHooks -->
@@ -45,7 +54,7 @@ function F() {
         <>
             <form>
                 <label>Enter Student Name:
-                    <input type="text" value={ studentName } onChange={ (e)=>{ setStudentName(e.target.value) }} />
+                    <input autoFocus type="text" value={ studentName } onChange={ (e)=>{ setStudentName(e.target.value) }} />
                 </label>
             </form>
             <br />

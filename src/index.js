@@ -7,6 +7,7 @@ import Message from './Message'
 import MyFirstComponent from './Components/MyFirstComponent'
 import MySecondComp from './Components/MySecondComp'
 import D from './Components/D'
+import RegisterUser from './Components/RegisterUser'
 
 
 function Student({mentor}){
@@ -45,6 +46,7 @@ ReactDOM.render(
     <MyFirstComponent />
     <MySecondComp />
     <D />
+    <RegisterUser />
   </React.StrictMode>,
   document.getElementById('container')
 );
